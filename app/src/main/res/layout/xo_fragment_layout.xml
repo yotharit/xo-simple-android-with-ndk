@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    tools:context=".XOFragment">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/point01"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        />
+
+    <Button
+        android:id="@+id/point00"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/point01"
+        app:layout_constraintBottom_toTopOf="@id/point10"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="60sp"/>
+
+    <Button
+        android:id="@+id/point01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/point00"
+        app:layout_constraintEnd_toStartOf="@id/point02"
+        app:layout_constraintBottom_toTopOf="@id/point11"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="60sp"/>
+
+    <Button
+        android:id="@+id/point02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/point01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/point12"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="60sp"/>
+
+    <Button
+        android:id="@+id/point10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/point00"
+        app:layout_constraintEnd_toStartOf="@id/point11"
+        app:layout_constraintBottom_toTopOf="@id/point20"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="60sp"/>
+
+    <Button
+        android:id="@+id/point11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/point10"
+        app:layout_constraintTop_toBottomOf="@id/point01"
+        app:layout_constraintEnd_toStartOf="@id/point12"
+        app:layout_constraintBottom_toTopOf="@id/point21"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="60sp"/>
+
+    <Button
+        android:id="@+id/point12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/point11"
+        app:layout_constraintTop_toBottomOf="@id/point02"
+        app:layout_constraintBottom_toTopOf="@id/point22"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="60sp"/>
+
+    <Button
+        android:id="@+id/point20"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/point10"
+        app:layout_constraintEnd_toStartOf="@id/point21"
+        app:layout_constraintBottom_toTopOf="@id/statusTitle"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="60sp"/>
+
+    <Button
+        android:id="@+id/point21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/point20"
+        app:layout_constraintTop_toBottomOf="@id/point11"
+        app:layout_constraintEnd_toStartOf="@id/point22"
+        app:layout_constraintBottom_toTopOf="@id/statusTitle"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="60sp"/>
+
+    <Button
+        android:id="@+id/point22"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/point21"
+        app:layout_constraintTop_toBottomOf="@id/point12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/statusTitle"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="60sp"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bottomGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="point20,point21,point22"/>
+
+    <TextView
+        android:id="@+id/statusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player X Turn"
+        app:layout_constraintTop_toBottomOf="@id/point21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/resetButton"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:ellipsize="end"
+        />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset XO Game"
+        app:layout_constraintTop_toBottomOf="@id/statusTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
